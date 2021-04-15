@@ -1,0 +1,75 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://player/Export/game01.png" type="Texture" id=1]
+[ext_resource path="res://Script/Player.gd" type="Script" id=2]
+[ext_resource path="res://player/Export/game001.png" type="Texture" id=3]
+[ext_resource path="res://player/Export/game_05.png" type="Texture" id=4]
+[ext_resource path="res://player/Export/game_03.png" type="Texture" id=5]
+[ext_resource path="res://player/Export/game_02.png" type="Texture" id=6]
+[ext_resource path="res://player/Export/game_06.png" type="Texture" id=7]
+[ext_resource path="res://player/Export/game_07.png" type="Texture" id=8]
+[ext_resource path="res://player/Export/game_0002.png" type="Texture" id=9]
+[ext_resource path="res://player/Export/game_04.png" type="Texture" id=10]
+[ext_resource path="res://player/Export/game_003.png" type="Texture" id=11]
+[ext_resource path="res://player/Export/game_005.png" type="Texture" id=12]
+[ext_resource path="res://player/Export/game_004.png" type="Texture" id=13]
+[ext_resource path="res://Script/PlayerAnimation.gd" type="Script" id=14]
+[ext_resource path="res://Scene/Camera2D.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Tilesets/light2.png" type="Texture" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Run",
+"speed": 50.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "Hurt",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 135.4
+height = 291.147
+
+[node name="Players" type="Node2D"]
+scale = Vector2( 0.15, 0.15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 0.144989, -0.178055 )
+collision_layer = 2147483649
+collision_mask = 14
+script = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="Player"]
+texture = ExtResource( 16 )
+texture_scale = 5.0
+energy = 1.5
+shadow_enabled = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+frames = SubResource( 1 )
+animation = "Jump"
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 17.153, 27.6682 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" parent="Player" instance=ExtResource( 15 )]
+zoom = Vector2( 1.5, 1.5 )

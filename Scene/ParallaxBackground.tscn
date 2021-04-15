@@ -1,0 +1,144 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Platform/cloud.png" type="Texture" id=1]
+[ext_resource path="res://Platform/platform2/platform3/b55.png" type="Texture" id=2]
+[ext_resource path="res://Platform/platform2/platform3/sky2.png" type="Texture" id=3]
+[ext_resource path="res://Platform/platform2/platform3/wall3.png" type="Texture" id=4]
+[ext_resource path="res://Platform/platform2/platform3/b44.png" type="Texture" id=5]
+[ext_resource path="res://Platform/platform2/platform3/b11.png" type="Texture" id=6]
+[ext_resource path="res://Platform/platform2/platform3/b22.png" type="Texture" id=7]
+[ext_resource path="res://Platform/platform2/platform3/b33.png" type="Texture" id=8]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+visible = false
+motion_mirroring = Vector2( 874, 614 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+position = Vector2( -96.1669, -90.2043 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="cloud" type="ParallaxLayer" parent="."]
+visible = false
+motion_scale = Vector2( 0.11, 0.11 )
+motion_mirroring = Vector2( 2080, 0 )
+
+[node name="Sprite" type="Sprite" parent="cloud"]
+position = Vector2( 1045.83, -365.528 )
+scale = Vector2( 2.4, 6 )
+texture = ExtResource( 1 )
+flip_v = true
+
+[node name="Building1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.13, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building1"]
+position = Vector2( 406.77, 215.586 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 2 )
+
+[node name="Building6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.13, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building6"]
+position = Vector2( 1369.73, 215.586 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 2 )
+
+[node name="Building2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.14, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building2"]
+position = Vector2( 384.907, 202.722 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 5 )
+
+[node name="Building7" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.14, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building7"]
+position = Vector2( 1347.87, 202.722 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 5 )
+
+[node name="Building3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.15, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building3"]
+position = Vector2( 504.244, 330.873 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 8 )
+
+[node name="Building8" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.15, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building8"]
+position = Vector2( 1467.21, 330.873 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 8 )
+
+[node name="Building4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.16, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building4"]
+position = Vector2( 436.461, 266.788 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 7 )
+
+[node name="Building9" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.16, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building9"]
+position = Vector2( 1399.43, 266.788 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 7 )
+
+[node name="Building5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.17, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building5"]
+position = Vector2( 495.232, 330.873 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 6 )
+
+[node name="Building10" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.17, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Building10"]
+position = Vector2( 1458.2, 330.873 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 6 )
+
+[node name="Wall" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 1, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Wall"]
+position = Vector2( 481.074, 403.373 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 4 )
+
+[node name="Wall2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 1, 0.11 )
+motion_mirroring = Vector2( 1925, 0 )
+
+[node name="Sprite" type="Sprite" parent="Wall2"]
+position = Vector2( 1444.04, 403.373 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 4 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0, 0.0117647, 0.137255, 1 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jungle3.wav-4e359388499308e4dcd1c60cf81783fa.sample"
+
+[deps]
+
+source_file="res://audio/jungle3.wav"
+dest_files=[ "res://.import/jungle3.wav-4e359388499308e4dcd1c60cf81783fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
